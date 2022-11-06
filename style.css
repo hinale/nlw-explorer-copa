@@ -41,7 +41,7 @@ body {
   background-image: var(--bg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
 }
 
 body * {
@@ -83,18 +83,21 @@ header {
   background-color: #1d1c19;
   color: #f7dd43;
   border: 1px solid #746615;
+  transform: scale(1.1);
 }
 
 .bg-color #blue:hover {
   background-color: #202024;
   color: #338af3;
   border: 1px solid #338af3;
+  transform: scale(1.1);
 }
 
 .bg-color #green:hover {
   background-color: #1a1f1b;
   color: #047c3f;
   border: 1px solid #047c3f;
+  transform: scale(1.1);
 }
 
 #cards {
@@ -176,6 +179,19 @@ header {
 
 .card {
   animation: appear 0.2s;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--card-color-primary);
+  border-radius: 2rem;
 }
 
 @keyframes appear {
