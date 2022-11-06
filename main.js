@@ -22,6 +22,26 @@ function createCard(date, day, games){
   `
 }
 
+function removeColor() {
+  document.body.classList.remove("yellow")
+  document.body.classList.remove("blue")
+  document.body.classList.remove("green")
+}
+
+function changeColorYellow() {
+  removeColor()
+  document.body.classList.add("yellow")
+}
+
+function changeColorBlue() {
+  removeColor()
+  document.body.classList.add("blue")
+}
+
+function changeColorGreen() {
+  removeColor()
+  document.body.classList.add("green")
+}
 
 document.querySelector('#cards').innerHTML = 
   createCard('24/11', 'quinta', createGame('brazil', '16:00','serbia')) +
